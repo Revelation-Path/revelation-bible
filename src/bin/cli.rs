@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use bible::loader::BibleLoader;
+use revelation_bible::loader::BibleLoader;
 use clap::{Parser, Subcommand};
 use masterror::prelude::*;
 use sqlx::postgres::PgPoolOptions;
