@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2024 Revelation Team
+// SPDX-FileCopyrightText: 2025 Revelation Team
+//
+// SPDX-License-Identifier: MIT
+
 use std::future::Future;
 
 use masterror::AppResult;

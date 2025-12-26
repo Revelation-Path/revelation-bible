@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2024 Revelation Team
+// SPDX-FileCopyrightText: 2025 Revelation Team
+//
+// SPDX-License-Identifier: MIT
+
 //! # revelation-bible
 //!
 //! Bible domain types for Revelation project.
