@@ -10,13 +10,13 @@ use super::Verse;
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct DailyReading {
     /// Unique reading ID
-    pub id: Uuid,
+    pub id:          Uuid,
     /// Day of year (1-366)
     pub day_of_year: i16,
     /// Calendar date for this reading
-    pub date: NaiveDate,
+    pub date:        NaiveDate,
     /// Verses included in this daily reading
-    pub verses: Vec<Verse>
+    pub verses:      Vec<Verse>
 }
 
 /// User response to daily reading
@@ -24,15 +24,15 @@ pub struct DailyReading {
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct VerseResponse {
     /// Response ID
-    pub id: Uuid,
+    pub id:               Uuid,
     /// User who wrote this response
-    pub user_id: Uuid,
+    pub user_id:          Uuid,
     /// Which daily reading this responds to
     pub daily_reading_id: Uuid,
     /// User's reflection content
-    pub content: String,
+    pub content:          String,
     /// When response was created
-    pub created_at: DateTime<Utc>
+    pub created_at:       DateTime<Utc>
 }
 
 /// Request to create verse response

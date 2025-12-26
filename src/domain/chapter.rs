@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct ChapterInfo {
     /// Chapter number
-    pub chapter: i16,
+    pub chapter:     i16,
     /// Number of verses in this chapter
     pub verse_count: i16
 }

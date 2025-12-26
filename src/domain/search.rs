@@ -7,9 +7,9 @@ use super::Verse;
 #[cfg_attr(feature = "api", derive(utoipa::ToSchema))]
 pub struct SearchResult {
     /// The found verse
-    pub verse: Verse,
+    pub verse:      Verse,
     /// Book name for display
-    pub book_name: String,
+    pub book_name:  String,
     /// Highlight positions (start, end) for matched text
     pub highlights: Vec<(usize, usize)>
 }

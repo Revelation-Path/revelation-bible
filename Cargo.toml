@@ -1,6 +1,6 @@
 [package]
 name = "revelation-bible"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 authors = ["Revelation Team"]
 description = "Bible domain for Revelation project"
@@ -10,18 +10,11 @@ readme = "README.md"
 keywords = ["revelation", "bible", "domain"]
 categories = ["data-structures"]
 
-[[bin]]
-name = "bible-cli"
-path = "src/bin/cli.rs"
-required-features = ["cli"]
-
 [features]
 default = []
 db = ["dep:sqlx"]
 backend = ["dep:masterror"]
 api = ["dep:utoipa"]
-user = ["db", "dep:entity-derive"]
-cli = ["db", "backend", "dep:tokio", "dep:tracing", "dep:tracing-subscriber", "dep:dotenvy", "dep:clap"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
@@ -29,12 +22,6 @@ serde_json = "1"
 uuid = { version = "1", features = ["v4", "v7", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
 validator = { version = "0.20", features = ["derive"] }
-sqlx = { version = "0.8", features = ["runtime-tokio", "postgres", "uuid", "chrono"], optional = true }
+sqlx = { version = "0.8", features = ["postgres"], optional = true }
 masterror = { version = "0.26", features = ["sqlx"], optional = true }
 utoipa = { version = "5", features = ["uuid", "chrono"], optional = true }
-entity-derive = { version = "0.2", optional = true }
-tokio = { version = "1", features = ["full"], optional = true }
-tracing = { version = "0.1", optional = true }
-tracing-subscriber = { version = "0.3", features = ["env-filter"], optional = true }
-dotenvy = { version = "0.15", optional = true }
-clap = { version = "4", features = ["derive"], optional = true }
